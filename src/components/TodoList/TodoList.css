@@ -1,0 +1,12 @@
+.todo-card {
+    min-height: 7rem;
+}
+
+.title-input {
+    font-size: 1.25rem !important;
+    margin-bottom: 0.75rem;
+}
+
+.card-title-cur {
+    cursor: pointer;
+}

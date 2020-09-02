@@ -1,0 +1,7 @@
+.bucket-name:hover {
+    background: red;
+}
+
+.bucket-name {
+    cursor: pointer;
+}
