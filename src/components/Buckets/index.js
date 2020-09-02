@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { connect } from 'react-redux'
 import BucketManager from "../BucketManager";
 import TodoList from "../TodoList"
@@ -12,9 +12,6 @@ const Buckets = (props) => {
     props.addBucket();
   }
 
-  // useEffect(() => {
-  //   addNewBucket();
-  // }, [])
 
 
   return (

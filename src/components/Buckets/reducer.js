@@ -50,9 +50,10 @@ export function reducer(state = initialState, action) {
 
         case _DELETE_BUCKET_NAME:
             Object.keys(newState).map((listId) => {
-                if (newState[listId].bucketName == action.name) {
+                if (newState[listId].bucketName === action.name) {
                     newState[listId].bucketName = DEFAULT
                 }
+                return listId
             })
             return newState;
 
