@@ -1,6 +1,6 @@
 
 import { _ADD_NEW_BUCKET_NAME, _DELETE_BUCKET_NAME } from "../components/BucketManager/action"
-import { DEFAULT } from '../components/Buckets/constants';
+import { DEFAULT } from '../components/Workarea/constants';
 const initialState = [
     DEFAULT
 ]

@@ -3,13 +3,13 @@ import { connect } from 'react-redux'
 import BucketManager from "../BucketManager";
 import TodoList from "../TodoList"
 import { Card } from "../Card";
-import { addNewBucketAction } from "./actions"
+import { ADD_NEW_TODO_LIST_ACTION } from "./actions"
 
 
-const Buckets = (props) => {
+const Workarea = (props) => {
 
-  const addNewBucket = () => {
-    props.addBucket();
+  const addNewTodoList = () => {
+    props.dispatchAddNewTodoList();
   }
 
 
@@ -17,7 +17,7 @@ const Buckets = (props) => {
   return (
     <div className="container-fluid">
       <div className="p-5">
-        <h1 className="text-center mb-5 row"> <span className="col-md-12 float-left"> Todo Lists <Card clickHandler={addNewBucket} /></span>   </h1>
+        <h1 className="text-center mb-5 row"> <span className="col-md-12 float-left"> Todo Lists <Card clickHandler={addNewTodoList} /></span>   </h1>
         <div className="row">
           <BucketManager />
 
@@ -43,8 +43,8 @@ const mapStateToProps = function (state) {
 
 const mapDispatchToProps = function (dispatch) {
   return {
-    addBucket: () => dispatch(addNewBucketAction())
+    dispatchAddNewTodoList: () => dispatch(ADD_NEW_TODO_LIST_ACTION())
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Buckets);
+export default connect(mapStateToProps, mapDispatchToProps)(Workarea);

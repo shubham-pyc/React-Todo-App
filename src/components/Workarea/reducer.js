@@ -1,5 +1,5 @@
 
-import { _ADD_NEW_BUTTON_ACTION } from "./actions"
+import { _ADD_NEW_TODO_LIST } from "./actions"
 import { _ADD_TASK, _EDIT_TITLE, _DELETE_LIST, _SET_BUCKET_NAME } from "../TodoList/actions"
 import { _CHANGE_TODO_TEXT, _TOGGLE_TASK_STATUS, _DELTE_TASK } from "../TodoItem/action"
 import { uuidv4 } from "../../utils"
@@ -14,7 +14,7 @@ export function reducer(state = initialState, action) {
     var newState = JSON.parse(JSON.stringify(state));
 
     switch (action.type) {
-        case _ADD_NEW_BUTTON_ACTION:
+        case _ADD_NEW_TODO_LIST:
             newState[uuidv4()] = {
                 "name": "Title",
                 "bucketName": DEFAULT,

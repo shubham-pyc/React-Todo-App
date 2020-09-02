@@ -6,7 +6,7 @@ import { Provider } from 'react-redux';
 import { createStore, combineReducers } from 'redux'
 ///import { autoRehydrate, persisteStore } from 'redux-persist'
 //import reducer from './reducers/reducer'
-import { reducer as listReducer } from './components/Buckets/reducer';
+import { reducer as listReducer } from './components/Workarea/reducer';
 import { reducer as bucketReducer } from './reducers/bucketReducer';
 import './index.css';
 
