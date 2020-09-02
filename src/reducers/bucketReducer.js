@@ -1,8 +1,8 @@
 
 import { _ADD_NEW_BUCKET_NAME, _DELETE_BUCKET_NAME } from "../components/BucketManager/action"
-
+import { DEFAULT } from '../components/Buckets/constants';
 const initialState = [
-    'Default'
+    DEFAULT
 ]
 
 export function reducer(state = initialState, action) {

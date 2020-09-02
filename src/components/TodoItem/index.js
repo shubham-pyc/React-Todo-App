@@ -23,14 +23,14 @@ const TodoItem = (props) => {
     var checkbox_id = uuidv4();
     return (
         <div className="row mb-2">
-            <div class="custom-control custom-checkbox">
-                <input type="checkbox" class="custom-control-input" id={checkbox_id} onChange={onStatusChangeHandler} checked={props.isDone}/>
-                <label class="custom-control-label" htmlFor={checkbox_id}></label>
+            <div className="custom-control custom-checkbox">
+                <input type="checkbox" className="custom-control-input" id={checkbox_id} onChange={onStatusChangeHandler} checked={props.isDone}/>
+                <label className="custom-control-label" htmlFor={checkbox_id}></label>
             </div>
 
-            <input type="text" class=" col-sm-10 form-control" placeholder="Add new" onChange={onChangeHandler} value={props.todo} disabled={props.isDone}></input>
+            <input type="text" className=" col-sm-10 form-control" placeholder="Add new" onChange={onChangeHandler} value={props.todo} disabled={props.isDone}></input>
 
-            <button type="button" class="close col-sm-1" aria-label="Close" onClick={onDeleteHandler}>
+            <button type="button" className="close col-sm-1" aria-label="Close" onClick={onDeleteHandler}>
                 <span aria-hidden="true">&times;</span>
             </button>
 

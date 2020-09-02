@@ -9,7 +9,10 @@ const BucketAdder = (props) => {
 
     const handleClick = () => {
         setBucketName('');
-        props.dispatchAddNewBucketName(bucketName);
+        if (bucketName.length) {
+            props.dispatchAddNewBucketName(bucketName);
+        }
+
     }
 
     const deleteBucketName = (event) => {
@@ -31,17 +34,17 @@ const BucketAdder = (props) => {
 
                 <div className="card-body">
                     <h5 className="card-title" >My Buckets</h5>
-                    <div class="row">
-                        <div class="col-md-8">
-                            <input class="form-control" onChange={(event) => setBucketName(event.target.value)} value={bucketName}></input>
+                    <div className="row">
+                        <div className="col-md-8">
+                            <input className="form-control" onChange={(event) => setBucketName(event.target.value)} value={bucketName}></input>
                         </div>
-                        <div class="col-md-4">
+                        <div className="col-md-4">
                             <button className="btn btn-primary" onClick={handleClick}>Add</button>
                         </div>
                     </div>
-                    <div class="row mt-3">
+                    <div className="row mt-3">
                         {props.bucketNames.map((name, index) => {
-                            return <span key={index} className="bucket-name badge badge-pill badge-secondary m-2" bucketName={name} onClick={deleteBucketName}>{name}</span>
+                            return <span key={index} className="bucket-name badge badge-pill badge-secondary m-2" bucketname={name} onClick={deleteBucketName}>{name}</span>
                         })}
                     </div>
 

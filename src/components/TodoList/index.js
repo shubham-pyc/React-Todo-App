@@ -57,7 +57,7 @@ class TodoList extends Component {
 
     getTitleSpace = () => {
         if (this.state.isEditing) {
-            return <input value={this.props.title} class="form-control title-input" onChange={this.handleTitleChange} onKeyPress={this.handleKeyPress} onBlur={this.handleFocusChange}></input>
+            return <input value={this.props.title} className="form-control title-input" onChange={this.handleTitleChange} onKeyPress={this.handleKeyPress} onBlur={this.handleFocusChange}></input>
         } else {
             return <h5 className="card-title mb-5"><span className="card-title-cur" onClick={this.initiateTitleChange}>{this.props.title}</span> <span className="badge badge-pill badge-secondary float-right">{this.props.bucketName}</span> </h5>
         }
@@ -76,7 +76,7 @@ class TodoList extends Component {
             <div className={className}>
 
                 <div className="card todo-card">
-                    <button type="button" class="close offset-sm-11 col-sm-1 right" aria-label="Close" onClick={this.handleListDelete}>
+                    <button type="button" className="close offset-sm-11 col-sm-1 right" aria-label="Close" onClick={this.handleListDelete}>
                         <span aria-hidden="true">&times;</span>
                     </button>
                     <div className="card-body m-2">

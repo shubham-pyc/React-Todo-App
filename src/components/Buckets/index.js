@@ -16,8 +16,8 @@ const Buckets = (props) => {
 
   return (
     <div className="container-fluid">
-      <div class="p-5">
-        <h1 className="text-center mb-5">Todo Lists</h1>
+      <div className="p-5">
+        <h1 className="text-center mb-5 row"> <span className="col-md-12 float-left"> Todo Lists <Card clickHandler={addNewBucket} /></span>   </h1>
         <div className="row">
           <BucketManager />
 
@@ -25,13 +25,10 @@ const Buckets = (props) => {
             return <TodoList key={id} listId={id} title={props.buckets[id].name} bucketName={props.buckets[id].bucketName} />
           })}
 
-          <Card addMore clickHandler={addNewBucket}>
-            <div>Add more</div>
-          </Card>
         </div>
       </div>
 
-    </div>
+    </div >
   );
 
 }
